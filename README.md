@@ -137,7 +137,7 @@ ARIMA 2,0,1 Model for prediction, where 2 predictor variables have effects. Temp
 ## 7. Performance Measurement
 
 - 6 air pollutants (PM2.5, PM10, SO2, NO2, CO & 03) predicted using a multivariate time series forecasting model that included exogenous variables
-- Quality of the tested models for each predicted target variable assessed using **AIC, BIC, Log likelihood ratio** among other criterai
+- Quality of the tested models for each predicted target variable assessed using **AIC, BIC, Log likelihood ratio** among other criteria.
 - Accuracy of the the time series forecasting model evaluated using **Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE)**.
 - The time series forecasting model for a specific air pollutant will be succesful if it's able to predict with the highest accuracy possible and determine which exogenous variables are significiant predictors.
 
