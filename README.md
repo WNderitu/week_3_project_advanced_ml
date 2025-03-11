@@ -4,19 +4,26 @@
 
 ## 1. Project Goal
 
-The goal of this project is to develop a machine learning model that predicts future air quality levels based on historical air quality data and relevant environmental factors. 
+The goal of this project is to develop a robust predictive model that predicts future air quality levels based on historical air quality data and relevant environmental factors.
 
 ## 2. Context/ Problem Statement
 
-A few years ago, China established the Air Quality Index (AQI) based on the level of five pollutant atmospheres, namely sulfur dioxide (SO2), nitrogen dioxide (NO2), particulate matter (PM10), carbon monoxide (CO) and ozone (O3) measured at the monitoring stations in each city.
+A few years ago, China established the Air Quality Index (AQI) based on the level of five pollutant atmospheres, namely sulfur dioxide (SO2), nitrogen dioxide (NO2), particulate matter (PM10), carbon monoxide (CO) and ozone (O3) measured at monitoring stations in each city.
 
-## 3. Key Data Sources
+## 3. Table of Contents
+
+Notebook 1: Data Cleaning
+Notebook 2: Exploratory Data Analysis
+Notebook 3: Time Series Forecasting
+
+## 4. Key Data Sources
 
 The Data is sourced from <https://www.openml.org/search?type=data&status=active&id=42933&sort=runs>
 
-## 4. Data Characteristics
+## 5. Data Characteristics
 
 - **The full dataset consists of 420,768 rows and 18 columns.**
+- The dataset spans from 1st March 2013 to 28th February 2017.
 - There are 6 target variables, namely:
   - PM2.5: Fine particulate matter. Defined as particles that are 2.5 microns or less in diameter.
   - PM10: Coarse particulate matter. Defined as particles that are 10 microns or less in diameter.
