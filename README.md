@@ -64,7 +64,7 @@ The Data is sourced from <https://www.openml.org/search?type=data&status=active&
 
 ---
 
-For the exploratory data analysis and time Series forecasting modelling, the dataset for **one monitoring station; Aotizhongxin** will be used.
+For exploratory data analysis and time Series forecasting, the dataset for **one monitoring station; Aotizhongxin** will be used.
 
 - The Aotizhongxin dataset has 35,064 observations and 17 features (4 time features, 6 target variables & 7 environmental factors).
 
