@@ -13,7 +13,9 @@ A few years ago, China established the Air Quality Index (AQI) based on the leve
 ## 3. Table of Contents
 
 Notebook 1: Data Cleaning
+
 Notebook 2: Exploratory Data Analysis
+
 Notebook 3: Time Series Forecasting
 
 ## 4. Key Data Sources
