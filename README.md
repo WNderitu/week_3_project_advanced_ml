@@ -22,6 +22,8 @@ The Data is sourced from <https://www.openml.org/search?type=data&status=active&
 
 ## 5. Data Characteristics
 
+---
+
 - **The full dataset consists of 420,768 rows and 18 columns.**
 - The dataset spans from 1st March 2013 to 28th February 2017.
 - There are 6 target variables, namely:
@@ -60,7 +62,7 @@ The Data is sourced from <https://www.openml.org/search?type=data&status=active&
 
 ---
 
-For the Time Series Forecasting Model, the dataset for **one monitoring station; Aotizhongxin** will be used for EDA & predicting levels for the 6 air pollutants.
+For the exploratory data analysis and time Series forecasting modelling, the dataset for **one monitoring station; Aotizhongxin** will be used.
 
 - The Aotizhongxin dataset has 35,064 observations and 17 features (4 time features, 6 target variables & 7 environmental factors).
 
@@ -68,33 +70,96 @@ For the Time Series Forecasting Model, the dataset for **one monitoring station;
 
 ## 6. Key insights from Exploratory Data Analysis
 
-**Univariate Analysis:**
+### Univariate analysis
 
-**Bivariate Analysis:**
+#### Air Pollutants
 
-**Multivariate Analysis:**
+- PM2.5 and PM10 are dangerously high with occasional extreme peaks.(PM2.5 - Mean: 83.16, SD:82.29, Median:60, Min-Max: 3-898), - PM10 - (Mean: 110.73, SD:95.37, Median:88, Min- Max:2-984)
+- SO2: Mostly controlled, but occasional high levels suggest industrial emissions. (Mean:17.57, SD:22.82, Median:9, Min-Max:0.29 - 341)
+- NO2 levels are consistently high, indicating major traffic or industrial contributions.(Mean:59.29, SD:37.00, Median:54, Min-Max:2 - 290)
+- CO levels vary greatly, suggesting pollution hotspots. (Mean:1267.07, SD:1242.12, Median:900, Min-Max:100 - 10,000)
+- 03 pollution is seasonal and affected by sunlight and NO₂ emissions. (Mean:55.18, SD:57.58, Median:41, Min-Max:0.21 - 423)
+
+#### Environmental Factors
+
+There are large seasonal variations in temperature and dew point with bimodal distributions. In terms of rainfall, there are mostly dry conditions, with rare heavy rainfall events. Pressure remains stable, with minor variations. Light winds dominate, but occasional strong gusts occur. The wind direction is variable.
+
+### Bivariate analysis
+
+#### Trend analysis
+
+Seasonal Trends:
+  
+Daily trends
+
+PM2.5 and PM10 follow similar trends, suggesting shared pollution sources. SO2, NO2, and CO show mid-month peaks. Ozone rises gradually, indicating photochemical formation.
+  
+Monthly trends
+
+Winter months show high PM2.5, PM10, SO2, NO2, and CO levels. Summer months have higher O3 levels. Spring and autumn act as transition periods between these extremes.
+
+Yearly trends
+
+There is an increase in PM2.5 & PM10 from 2013 to 2014 followed by a decline until 2016, then a  sharp rise in 2017. There is a steady decline in SO2 levels from 2013 to 2016, however, a noticeable increase in 2017. NO2 levels are relatively stable until 2015 followed by a decline in 2016 with a s sharp increase in 2017. For CO levels, a general upward trend from 2013 to 2015 indicating worsening air quality. Then a decline in 2016 followed by a sharp increase in 2017. There is a steady increase in 03 levels from 2013 to 2015 peaking in 2015, then declines slightly in 2016 and drops significantly in 2017.
+
+#### Correlation Analysis
+
+There is strong positive linear relationship (as one variable increases, the other increases) between PM2.5 & PM10, temperature & dewpoint temperature, PM 2.5 & CO. A strong negative relationship between PRES & DEWP and TEMP & PRES. 
+
+### Multivariate analysis
+
+#### Prediciting future fine particulate matter levels (PM2.5)
+
+ARIMA(1,1,2) model where predictor variables are:
+
+- DEWP has a highly significant positive effect (dew point (humidity) increases, PM2.5 levels also increase, possibly due to particle aggregation or reduced atmospheric dispersion in humid conditions)
+- pressure has a small negative effect (higher atmospheric pressure is associated with slightly lower PM2.5 levels, likely aiding in dispersion)
+- wd_direction has a small negative effect (changes in wind direction marginally reduce PM2.5 levels, reflecting potential shifts in air mass or source contributions)
+
+#### Prediciting future coarse particulate matter levels
+
+#### Prediciting future sulphur dioxide levels
+
+#### Predicting future nitrogen dioxide levels
+
+#### Prediciting future carbon monoxide levels
+
+#### Prediciting 0zone levels
 
 ## 7. Performance Measurement
 
-- The time series forecasting model will be evaluated using **Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE)**.
-- The time series forecasting model will be succesful if it's able to predict the 6 air pollutants with the highest accuracy possible.
+- 6 air pollutants (PM2.5, PM10, SO2, NO2, CO & 03) predicted using a multivariate time series forecasting model that included exogenous variables
+- Quality of the tested models for each predicted target variable assessed using **AIC, BIC, Log likelihood ratio** among other criterai
+- Accuracy of the the time series forecasting model evaluated using **Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE)**.
+- The time series forecasting model for a specific air pollutant will be succesful if it's able to predict with the highest accuracy possible and determine which exogenous variables are significiant predictors.
 
 ## 8. Scope of Solution Space
 
-- Model: ARIMA (p,d,q) for prediciting 6 air pollutants for Aotizhongxin monitoring station.
-
 Data Preprocessing:
 
-- Handling of missing values using ffill and bfill
-- Creation of date column with datetime dtype
-- Setting of hourly frequency to convert datae set to time series data
-- Converting categorical features to numerical features
-- Deletion of unneccessary features; no, year, month, day, hour and wd
+- Handling of missing values.
+- Conversion of timestamps to datetime dtype.
+- Setting time as the index for time series analysis.
+- Setting hourly frequency to convert to time series data.
+- Converting categorical features to numerical features.
+- Deletion of unneccessary features.
+
+Model:
+
+- ARIMA (p,d,q) models used to predict 6 future air pollutant levels at Aotizhongxin monitoring station based on historical pollutant data.
   
 ## 9. Constraints / Potential Challenges
 
 - Data Quality:
-  
-- Model Interpretability
+  - Missing values
+  - Noise in readings
+- Model Interpretability:
+  - Seasonal variations and external factors (e.g., industrial activity) affecting air quality
+- Other:
+  - Computational cost of training complex models such as SARIMA.
 
 ## 10. Stakeholders
+
+- Environmental agencies and policymakers for monitoring and intervention.
+- Urban planners for designing pollution control strategies.
+- General public for awareness and preparedness against air pollution levels.
