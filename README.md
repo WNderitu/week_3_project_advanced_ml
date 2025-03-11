@@ -110,21 +110,27 @@ There is strong positive linear relationship (as one variable increases, the oth
 
 #### Prediciting future fine particulate matter levels (PM2.5)
 
-ARIMA(1,1,2) model where predictor variables are:
-
-- DEWP has a highly significant positive effect (dew point (humidity) increases, PM2.5 levels also increase, possibly due to particle aggregation or reduced atmospheric dispersion in humid conditions)
-- pressure has a small negative effect (higher atmospheric pressure is associated with slightly lower PM2.5 levels, likely aiding in dispersion)
-- wd_direction has a small negative effect (changes in wind direction marginally reduce PM2.5 levels, reflecting potential shifts in air mass or source contributions)
+ARIMA(1,1,2) model for prediction, where 3 predictor variables have effects. Dew point has a highly significant positive effect, pressure and wind direction have small negative effects.
 
 #### Prediciting future coarse particulate matter levels
 
+ARIMA(2,1,2) model for prediction, where 4 predictor variables have effects. Dew point and wind speed have strong significant positive effects, while rain, wind direction and presure are negatively associated.
+
 #### Prediciting future sulphur dioxide levels
+
+ARIMA(2,1,2) model for prediction, where 4 predictor variables have effects. Dew point has a strong significant positive effect, while temperature and pressure have significant negative effects, with wind direction having a small negative effect.
 
 #### Predicting future nitrogen dioxide levels
 
+ARIMA(1,0,1) model for prediction, where 4 predictor variables have effects. Dew point has a strong significant positive effect, while temperature and pressure have significant negative effects, with wind direction having a small negative effect.
+
 #### Prediciting future carbon monoxide levels
 
+ARIMA(2,1,1) model for for prediction, where 3 predictor variables have effects. Dew point has a strong significant positive effect, temperature has a strong significant negative effect while wind direction has a small negative effect.
+
 #### Prediciting 0zone levels
+
+ARIMA 2,0,1 Model for prediction, where 2 predictor variables have effects. Temperature has a strong significant positive effect and rain has a small positive effect.
 
 ## 7. Performance Measurement
 
