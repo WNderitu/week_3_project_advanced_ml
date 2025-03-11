@@ -72,6 +72,8 @@ For exploratory data analysis and time Series forecasting, the dataset for **one
 
 ## 6. Key insights from Exploratory Data Analysis
 
+--
+
 ### Univariate analysis
 
 #### Air Pollutants
@@ -86,27 +88,25 @@ For exploratory data analysis and time Series forecasting, the dataset for **one
 
 There are large seasonal variations in temperature and dew point with bimodal distributions. In terms of rainfall, there are mostly dry conditions, with rare heavy rainfall events. Pressure remains stable, with minor variations. Light winds dominate, but occasional strong gusts occur. The wind direction is variable.
 
+--
+
 ### Bivariate analysis
 
 #### Trend analysis
 
 Seasonal Trends:
   
-Daily trends
-
-PM2.5 and PM10 follow similar trends, suggesting shared pollution sources. SO2, NO2, and CO show mid-month peaks. Ozone rises gradually, indicating photochemical formation.
+- Daily trends: PM2.5 and PM10 follow similar trends, suggesting shared pollution sources. SO2, NO2, and CO show mid-month peaks. Ozone rises gradually, indicating photochemical formation.
   
-Monthly trends
+- Monthly trends: Winter months show high PM2.5, PM10, SO2, NO2, and CO levels. Summer months have higher O3 levels. Spring and autumn act as transition periods between these extremes.
 
-Winter months show high PM2.5, PM10, SO2, NO2, and CO levels. Summer months have higher O3 levels. Spring and autumn act as transition periods between these extremes.
-
-Yearly trends
-
-There is an increase in PM2.5 & PM10 from 2013 to 2014 followed by a decline until 2016, then a  sharp rise in 2017. There is a steady decline in SO2 levels from 2013 to 2016, however, a noticeable increase in 2017. NO2 levels are relatively stable until 2015 followed by a decline in 2016 with a s sharp increase in 2017. For CO levels, a general upward trend from 2013 to 2015 indicating worsening air quality. Then a decline in 2016 followed by a sharp increase in 2017. There is a steady increase in 03 levels from 2013 to 2015 peaking in 2015, then declines slightly in 2016 and drops significantly in 2017.
+- Yearly trends: There is an increase in PM2.5 & PM10 from 2013 to 2014 followed by a decline until 2016, then a  sharp rise in 2017. There is a steady decline in SO2 levels from 2013 to 2016, however, a noticeable increase in 2017. NO2 levels are relatively stable until 2015 followed by a decline in 2016 with a s sharp increase in 2017. For CO levels, a general upward trend from 2013 to 2015 indicating worsening air quality. Then a decline in 2016 followed by a sharp increase in 2017. There is a steady increase in 03 levels from 2013 to 2015 peaking in 2015, then declines slightly in 2016 and drops significantly in 2017.
 
 #### Correlation Analysis
 
 There is strong positive linear relationship (as one variable increases, the other increases) between PM2.5 & PM10, temperature & dewpoint temperature, PM 2.5 & CO. A strong negative relationship between PRES & DEWP and TEMP & PRES. 
+
+--
 
 ### Multivariate analysis
 
@@ -133,6 +133,8 @@ ARIMA(2,1,1) model for for prediction, where 3 predictor variables have effects.
 #### Prediciting 0zone levels
 
 ARIMA 2,0,1 Model for prediction, where 2 predictor variables have effects. Temperature has a strong significant positive effect and rain has a small positive effect.
+
+--
 
 ## 7. Performance Measurement
 
