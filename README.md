@@ -72,8 +72,6 @@ For exploratory data analysis and time Series forecasting, the dataset for **one
 
 ## 6. Key insights from Exploratory Data Analysis
 
---
-
 ### Univariate analysis
 
 #### Air Pollutants
@@ -88,7 +86,7 @@ For exploratory data analysis and time Series forecasting, the dataset for **one
 
 There are large seasonal variations in temperature and dew point with bimodal distributions. In terms of rainfall, there are mostly dry conditions, with rare heavy rainfall events. Pressure remains stable, with minor variations. Light winds dominate, but occasional strong gusts occur. The wind direction is variable.
 
---
+---
 
 ### Bivariate analysis
 
@@ -106,7 +104,7 @@ Seasonal Trends:
 
 There is strong positive linear relationship (as one variable increases, the other increases) between PM2.5 & PM10, temperature & dewpoint temperature, PM 2.5 & CO. A strong negative relationship between PRES & DEWP and TEMP & PRES. 
 
---
+---
 
 ### Multivariate analysis
 
@@ -133,8 +131,6 @@ ARIMA(2,1,1) model for for prediction, where 3 predictor variables have effects.
 #### Prediciting 0zone levels
 
 ARIMA 2,0,1 Model for prediction, where 2 predictor variables have effects. Temperature has a strong significant positive effect and rain has a small positive effect.
-
---
 
 ## 7. Performance Measurement
 
